@@ -16,6 +16,6 @@ Start by cloning the repository to your local machine. Open your terminal and ex
 `git clone https://github.com/Swietonp/geo-elevation.git`
 
 ### Step 2: Create and Activate a Python Virtual Environment
-`cd <project-directory-name>`
-`python -m venv venv`
-`venv\Scripts\activate`
+*`cd <project-directory-name>`
+*`python -m venv venv`
+*`venv\Scripts\activate`
