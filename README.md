@@ -31,3 +31,7 @@ Once the setup is complete, you can run the application using the following comm
 
 ### Using Using Geographic CoordinatesEPSG:4326 (WGS 84)
 `python main.py --lat 52.21 --long 20.99`
+
+## Output
+Upon successful execution, the program will provide a link to download the terrain elevation data. This link will appear in your terminal and can be used to directly access and download the data.
+e.g. https://opendata.geoportal.gov.pl/NumDaneWys/NMPT/78046/78046_1404384_N-34-139-A-c-2-1.asc
