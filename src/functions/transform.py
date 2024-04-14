@@ -1,4 +1,4 @@
-from pyproj import Transformer
+from pyproj import Transformer, Proj, transform
 
 
 def transform_cs92_to_wgs84(x: float, y: float) -> tuple:
@@ -20,6 +20,7 @@ def transform_wgs84_to_cs92(lon: float, lat: float) -> tuple:
     :param lat: latitude parameter of geo coordinates (EPSG:4326 (WGS 84))
     :return: x and y (EPSG:2180 (CS92))
     """
-    transformer = Transformer.from_crs("EPSG:4326", "EPSG:2180", always_xy=True)
-    x, y = transformer.transform(lon, lat)
+    wgs84 = Proj(init='epsg:4326')
+    cs92 = Proj(init='epsg:2180')
+    x, y = transform(wgs84, cs92, lon, lat)
     return x, y

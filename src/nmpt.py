@@ -2,14 +2,18 @@ import re
 
 from src.api.functions import get_all_layers, get_request
 from src.api.utils.nmt import Nmt
+from src.functions.transform import transform_wgs84_to_cs92
 
 c = re.compile("\{{1}.*\}{1}")
 
 
-def get_nmpt(x, y):
+def get_nmpt(x=None, y=None, lat=None, long=None):
     """
     Gets a list of available NMPT data for a point with coordinates in the PUWG1992 system
     """
+
+    if lat and long:
+        x, y = transform_wgs84_to_cs92(long, lat)
 
     URL = "https://mapy.geoportal.gov.pl/wss/service/PZGIK/NMPT/WMS/SkorowidzeUkladEVRF2007?"
     layers = get_all_layers(url=URL, service='WMS')
