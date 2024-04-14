@@ -29,7 +29,7 @@ Once the setup is complete, you can run the application using the following comm
 ### Using Cartesian Coordinates EPSG:2180 (CS92)
 `python main.py --x 641412.648697 --y 488156.603191`
 
-### Using Using Geographic CoordinatesEPSG:4326 (WGS 84)
+### Using Using Geographic Coordinates EPSG:4326 (WGS 84)
 `python main.py --lat 52.21 --long 20.99`
 
 ## Output
